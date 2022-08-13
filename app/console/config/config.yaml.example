@@ -1,0 +1,46 @@
+server:
+  address: ":8082"
+  dumpRouterMap: true
+  routeOverWrite: true
+  accessLogEnabled: false
+  accessLogPattern: "access-{Ymd}.log"
+  openapiPath: "/api.json"
+  swaggerPath: "/swagger"
+
+
+logger:
+  path: "./logs/"
+  file: "demo-console.{Y-m-d}.log"
+  level: "all"
+  stdout: true
+  rotateBackupLimit: 30
+
+database:
+  default:
+    type: "mysql"
+    link: "root:123456@tcp(127.0.0.1:3306)/demo?timeout=5s&readTimeout=5s&writeTimeout=5s&parseTime=true&loc=Local&charset=utf8,utf8mb4"
+    debug: true
+    CreatedAt: CreateTime
+    UpdatedAt: UpdateTime
+
+redis:
+  address: "127.0.0.1:6379"
+  db: "0"
+  pass: "123456"
+
+minio:
+  accessKey: "minio"
+  accessKeySecret: "minio123"
+  endpoint: "127.0.0.1:9000"
+  bucketName: "demo"
+  token: ""
+  useSSL: false
+  internalUrl:
+  externalUrl:
+
+
+demo:
+  console:
+
+
+

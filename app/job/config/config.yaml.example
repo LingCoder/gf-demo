@@ -1,0 +1,18 @@
+server:
+  address: ":8081"
+  dumpRouterMap: true
+  routeOverWrite: true
+  accessLogEnabled: false
+
+logger:
+  path: "./logs/"
+  file: "demo-job.{Y-m-d}.log"
+  level: "all"
+  stdout: true
+  rotateBackupLimit: 30
+
+demo:
+  job:
+
+
+
