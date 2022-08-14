@@ -1,8 +1,9 @@
+# 规则描述：每天执行一次，将最近7天没有活跃且非BUG的ISSUE设置标签:inactive
 name: Issue Check Inactive
 
 on:
   schedule:
-    - cron: "0 0 */15 * *"
+    - cron: "0 0 */1 * *"
 
 permissions:
   contents: read
@@ -11,12 +12,14 @@ jobs:
   issue-check-inactive:
     permissions:
       issues: write  # for actions-cool/issues-helper to update issues
-      pull-requests: write  # for actions-cool/issues-helper to update PRs
+     # pull-requests: write  # for actions-cool/issues-helper to update PRs
     runs-on: ubuntu-latest
     steps:
       - name: check-inactive
         uses: actions-cool/issues-helper@v3
         with:
           actions: 'check-inactive'
-          inactive-label: 'Inactive'
-          inactive-day: 10
+          inactive-label: 'inactive'
+          inactive-day: 7
+          issue-state: open
+          exclude-labels: bug
