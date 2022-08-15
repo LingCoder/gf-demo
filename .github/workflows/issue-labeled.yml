@@ -1,5 +1,3 @@
-## 当issue被标记为help wanted 时，增加评论
-
 name: Issue Labeled
 
 on:
@@ -19,4 +17,4 @@ jobs:
           issue-number: ${{ github.event.issue.number }}
           body: |
             Hello @${{ github.event.issue.user.login }}. We like your proposal/feedback and would appreciate a contribution via a Pull Request by you or another community member. We thank you in advance for your contribution and are looking forward to reviewing it!
-            你好 @${{ github.event.issue.user.login }}.我们喜欢您的提案/反馈，并希望您或其他社区成员通过拉取请求做出贡献。我们提前感谢您的贡献，并期待对其进行审查。
+            你好 @${{ github.event.issue.user.login }}。我们喜欢您的提案/反馈，并希望您或其他社区成员通过拉取请求做出贡献。我们提前感谢您的贡献，并期待对其进行审查。

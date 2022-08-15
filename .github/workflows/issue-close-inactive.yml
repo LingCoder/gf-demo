@@ -1,9 +1,8 @@
-# 规则描述：每天执行一次，将最近30天没有活跃且非BUG的ISSUE关闭
 name: Issue Close Require
 
 on:
   schedule:
-    - cron: "0 0 */1 * *"
+    - cron: "0 3 * * *"
 
 jobs:
   close-issues:
@@ -14,6 +13,6 @@ jobs:
         with:
           actions: "close-issues"
 #          token: ${{ secrets.GF_TOKEN }}
-          labels: "inactive"
+          labels: 'inactive'
           inactive-day: 30
-          exclude-labels: bug
+          exclude-labels: 'bug'

@@ -1,6 +1,4 @@
-# 规则描述：将需要提供更多细节且暂未关闭的issue，在issue作者评论后，移除 need more details 标签
-name: Issue Remove Inactive
-
+name: Issue Remove Need More Details
 on:
   issues:
     types: [edited]
@@ -11,7 +9,7 @@ permissions:
   contents: read
 
 jobs:
-  issue-remove-inactive:
+  issue-remove-need-more-details:
     permissions:
       issues: write  # for actions-cool/issues-helper to update issues
      # pull-requests: write  # for actions-cool/issues-helper to update PRs

@@ -1,9 +1,8 @@
-# 规则描述：每天执行一次，将最近7天没有活跃且非BUG的ISSUE设置标签:inactive
 name: Issue Check Inactive
 
 on:
   schedule:
-    - cron: "0 0 */1 * *"
+    - cron: "0 3 * * *"
 
 permissions:
   contents: read
@@ -22,4 +21,4 @@ jobs:
           inactive-label: 'inactive'
           inactive-day: 7
           issue-state: open
-          exclude-labels: bug
+          exclude-labels: 'bug'

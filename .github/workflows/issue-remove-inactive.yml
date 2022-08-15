@@ -1,4 +1,3 @@
-# 规则描述：在issue没有活跃且尚未被关闭期间，若有更新或新评论，则移除其inactive标签
 name: Issue Remove Inactive
 
 on:
