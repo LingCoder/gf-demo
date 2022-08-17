@@ -9,9 +9,7 @@ import (
 )
 
 func Init() {
-
 	s := gocron.NewScheduler(time.Local)
-
 	// Task 1
 	s.Every(1).
 		Seconds().
